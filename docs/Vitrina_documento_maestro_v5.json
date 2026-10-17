@@ -1,0 +1,2957 @@
+{
+  "documentVersion": "5.0",
+  "visualBatchVersion": "4.0",
+  "createdAt": "2026-10-13T22:09:40-03:00",
+  "purpose": "master_handoff_spec_with_editorial_course_drafts",
+  "approvedByUser": false,
+  "teacherReview": "pending",
+  "links": {
+    "project": "https://app.notion.com/p/3f38350307db8124a04bf928ea6cdc4f",
+    "roadmap": "https://app.notion.com/p/3f78350307db8177800beefd18e7faa7",
+    "gallery": "https://app.notion.com/p/3f98350307db81dba626d304f560b727",
+    "sources": "https://app.notion.com/p/3f48350307db8195800dc0588ac28408",
+    "figma": "https://www.figma.com/design/JxNpbms2RxDh3S8w8Rezf2",
+    "repo": "https://github.com/midudev/mcp-higgsfield-landing",
+    "example": "https://arko-sushi.midudev.workers.dev/",
+    "masterNotion": "https://app.notion.com/p/3f98350307db81aa8cf9c375025cbe67"
+  },
+  "rules": [
+    "Conservar Mujer a la izquierda, Kids al fondo izquierdo y Hombre a la derecha desde la entrada.",
+    "Conservar calzado propio por departamento, fachada alta y una única familia de mobiliario.",
+    "Isla con libros, tres perfumes, prendas y complementos; sin maniquíes centrales.",
+    "Curso en orden explícito: S01,S02,S03,S04,S05,S06,S07,S10,S08,S09,S11. S10 es el tema 8.",
+    "Relacionar lecciones con escenas por IDs. El paso físico por IMG-10 no adelanta el tema 11.",
+    "Sí completa el apartado actual y habilita el siguiente; No mantiene el siguiente sin habilitar y ofrece repaso.",
+    "Conservar apartados completados, permitir revisitas y evitar bloquear el scroll del navegador.",
+    "Mostrar imágenes de respaldo cuando no haya video o se solicite movimiento reducido.",
+    "Calibrar hotspots en coordenadas normalizadas por imagen, separados de los metros del plano.",
+    "Registrar revisión del asistente, revisión docente y aprobación del usuario como estados distintos."
+  ],
+  "integration": {
+    "schemaVersion": "1.1",
+    "project": "Vitrina",
+    "documentVersion": "4.1",
+    "updated": "2026-10-13",
+    "status": "visuals_reviewed_with_notes_content_and_videos_pending",
+    "nextAction": "Revisar nuevas imágenes y producir clips de transición; integrar paneles del curso después.",
+    "reference": {
+      "styleFile": "referencias/Fachada_referencia.png",
+      "libraryFileId": "libfile_71e0d51778f08191808f26beb0a6dd3f",
+      "layoutFile": "referencias/Vitrina_layout_v4.svg",
+      "brandLanguage": "Urban contemporary ready-to-wear, Armani Exchange aesthetic reference; teaching store with requested three departments",
+      "centreIslandSource": "referencias/Isla_actualizada_fuente.png"
+    },
+    "store": {
+      "dimensions_m": {
+        "width": 8,
+        "depth": 12,
+        "height": 4.6
+      },
+      "dimensionStatus": "proposed_not_calibrated",
+      "coordinateConvention": "metres; X left-to-right from entry; Y entry-to-back; rect_m is [x,y,width,depth]",
+      "zones": [
+        {
+          "id": "Z01",
+          "name": "Entrada",
+          "rect_m": [
+            3,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "Z02",
+          "name": "Mujer",
+          "rect_m": [
+            0,
+            2,
+            3,
+            5.6
+          ],
+          "footwear": {
+            "id": "FW-MUJER",
+            "wall": "left",
+            "rect_m": [
+              0.12,
+              5.5,
+              0.52,
+              1.85
+            ]
+          }
+        },
+        {
+          "id": "Z03",
+          "name": "Kids",
+          "rect_m": [
+            0,
+            8,
+            3.5,
+            4
+          ],
+          "footwear": {
+            "id": "FW-KIDS",
+            "wall": "back-left",
+            "rect_m": [
+              0.6,
+              11.35,
+              2.75,
+              0.52
+            ]
+          }
+        },
+        {
+          "id": "Z04",
+          "name": "Hombre",
+          "rect_m": [
+            5,
+            2,
+            3,
+            7
+          ],
+          "footwear": {
+            "id": "FW-HOMBRE",
+            "wall": "right",
+            "rect_m": [
+              7.36,
+              6.4,
+              0.52,
+              1.85
+            ]
+          }
+        },
+        {
+          "id": "Z05",
+          "name": "Isla central",
+          "rect_m": [
+            3.35,
+            3.75,
+            1.3,
+            2.9
+          ]
+        },
+        {
+          "id": "Z06",
+          "name": "Vidriera Mujer",
+          "rect_m": [
+            0.18,
+            0.15,
+            2.62,
+            1.25
+          ]
+        },
+        {
+          "id": "Z07",
+          "name": "Vidriera Hombre",
+          "rect_m": [
+            5.2,
+            0.15,
+            2.62,
+            1.25
+          ]
+        },
+        {
+          "id": "Z08",
+          "name": "Caja",
+          "rect_m": [
+            4.55,
+            10.15,
+            1.35,
+            1
+          ]
+        },
+        {
+          "id": "Z09",
+          "name": "Probadores",
+          "rect_m": [
+            6.15,
+            9.4,
+            1.65,
+            2.4
+          ]
+        }
+      ],
+      "departmentRoute": [
+        "Z02",
+        "Z03",
+        "Z04"
+      ],
+      "fixtures": {
+        "status": "proposed",
+        "adultTableHeight_m": 0.85,
+        "adultRailHeight_m": 1.55,
+        "kidsTableHeight_m": 0.6,
+        "kidsRailHeight_m": 1.1
+      }
+    },
+    "design": {
+      "status": "revised_from_new_facade_reference",
+      "materials": [
+        "grey concrete/plaster",
+        "warm grey continuous floor",
+        "graphite clothing rails",
+        "brushed aluminium/stainless tables and footwear shelves"
+      ],
+      "palette": {
+        "floor": "#B2AFA9",
+        "wall": "#989792",
+        "metal": "#B7BBBC",
+        "graphite": "#25282A",
+        "cream": "#ECEAE3",
+        "kidsSage": "#8F9A8B"
+      },
+      "invariants": [
+        "Mujer first on left, Kids behind on rear left, Hombre on right as seen entering",
+        "One department-specific footwear wall per department",
+        "One coherent furniture family",
+        "No reversed orientation or relocation between views",
+        "Kids shares same architecture and material palette",
+        "Controlled variants change only the specified attribute",
+        "No central-island mannequins; mannequins remain in front display windows.",
+        "Use the new ceiling baffles and high glass frontage in every room view.",
+        "Books/perfume island grouping stays coherent in every view."
+      ],
+      "architecture": "Frente acristalado de mayor altura, marcos grafito, aletas metálicas, techo de lamas con luz lineal y rieles.",
+      "centreIsland": "Libros de diseño/arquitectura, 3 perfumes, prendas dobladas, bolso y zapatillas. Sin maniquíes centrales."
+    },
+    "courseOrder": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S10",
+      "S08",
+      "S09",
+      "S11"
+    ],
+    "courseSections": [
+      {
+        "id": "S01",
+        "title": "Marca y experiencia",
+        "order": 1,
+        "zoneIds": [
+          "Z01",
+          "Z06",
+          "Z07"
+        ],
+        "assetIds": [
+          "IMG-02",
+          "IMG-14"
+        ],
+        "curriculumUnits": [
+          "U1"
+        ],
+        "sourceReferences": [
+          "Clase 1: 2–8, 9–21, 22–37; programa Ricardo, clase 1"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "La experiencia comienza antes de entrar. La fachada, la vidriera y el acceso presentan una primera idea de la marca. En Vitrina, el vidrio, la perfilería grafito, la altura y la exhibición con pocas piezas construyen una identidad de moda contemporánea. Al diseñar un local, conviene relacionar esas decisiones con el público y la propuesta de producto. Una referencia estética orienta materiales y atmósfera, pero también hay que definir qué experiencia se quiere ofrecer. Observá si el exterior y el interior sostienen el mismo lenguaje y si el acceso se reconoce con claridad.",
+          "objective": "Relacionar identidad, público y decisiones del espacio.",
+          "observationPoints": [
+            "Materiales y proporciones de la fachada.",
+            "Relación entre acceso, vidrieras y producto.",
+            "Continuidad de identidad al entrar."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés explicar cómo el local comunica la identidad de la marca?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 1,
+          "objective": "Relacionar identidad, público y decisiones del espacio.",
+          "body": "La experiencia comienza antes de entrar. La fachada, la vidriera y el acceso presentan una primera idea de la marca. En Vitrina, el vidrio, la perfilería grafito, la altura y la exhibición con pocas piezas construyen una identidad de moda contemporánea. Al diseñar un local, conviene relacionar esas decisiones con el público y la propuesta de producto. Una referencia estética orienta materiales y atmósfera, pero también hay que definir qué experiencia se quiere ofrecer. Observá si el exterior y el interior sostienen el mismo lenguaje y si el acceso se reconoce con claridad.",
+          "observe": [
+            "Materiales y proporciones de la fachada.",
+            "Relación entre acceso, vidrieras y producto.",
+            "Continuidad de identidad al entrar."
+          ],
+          "main": "IMG-02",
+          "extra": [],
+          "note": "Ampliar historia y segmentos con los ejemplos docentes. Vitrina es un caso didáctico, no una sucursal real de Armani Exchange."
+        },
+        "previewAssetIds": [
+          "IMG-02"
+        ]
+      },
+      {
+        "id": "S02",
+        "title": "Espacio y distribución",
+        "order": 2,
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z03",
+          "Z04"
+        ],
+        "assetIds": [
+          "IMG-01",
+          "IMG-14"
+        ],
+        "curriculumUnits": [
+          "U2"
+        ],
+        "sourceReferences": [
+          "Clase 2: 2–24; clase 3: 2–32"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "El layout organiza dónde se ubican las categorías, los muebles y los servicios. En esta propuesta, Mujer comienza a la izquierda, Kids continúa al fondo izquierdo y Hombre ocupa la derecha. La isla central funciona como referencia compartida y deja circulación a ambos lados. Una buena lectura del espacio permite reconocer las categorías y conectar productos complementarios sin saturar el paso. El plano ayuda a comparar alternativas; la vista general permite observar cómo se percibe una de ellas. Evaluá qué se ve desde la entrada, cómo se llega a cada zona y qué obstáculos podrían aparecer.",
+          "objective": "Leer departamentos, adyacencias y circulación.",
+          "observationPoints": [
+            "Ubicación relativa de Mujer, Kids y Hombre.",
+            "Pasos libres alrededor de la isla.",
+            "Relación entre departamentos, caja y probadores."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés reconocer cómo esta distribución organiza los departamentos?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 2,
+          "objective": "Leer departamentos, adyacencias y circulación.",
+          "body": "El layout organiza dónde se ubican las categorías, los muebles y los servicios. En esta propuesta, Mujer comienza a la izquierda, Kids continúa al fondo izquierdo y Hombre ocupa la derecha. La isla central funciona como referencia compartida y deja circulación a ambos lados. Una buena lectura del espacio permite reconocer las categorías y conectar productos complementarios sin saturar el paso. El plano ayuda a comparar alternativas; la vista general permite observar cómo se percibe una de ellas. Evaluá qué se ve desde la entrada, cómo se llega a cada zona y qué obstáculos podrían aparecer.",
+          "observe": [
+            "Ubicación relativa de Mujer, Kids y Hombre.",
+            "Pasos libres alrededor de la isla.",
+            "Relación entre departamentos, caja y probadores."
+          ],
+          "main": "IMG-01",
+          "extra": [],
+          "note": "8 × 12 m y altura 4,6 m son medidas propuestas; no se han calibrado sobre los renders."
+        },
+        "previewAssetIds": [
+          "IMG-01"
+        ]
+      },
+      {
+        "id": "S03",
+        "title": "Recorrido del cliente",
+        "order": 3,
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z03",
+          "Z04"
+        ],
+        "assetIds": [
+          "IMG-14",
+          "IMG-01"
+        ],
+        "curriculumUnits": [
+          "U2",
+          "U6"
+        ],
+        "sourceReferences": [
+          "Clase 2: 24; clase 3: 33–38; clase 4: 2–5, 18–22"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "El recorrido se construye con líneas de visión, exhibiciones y puntos de interés. Desde la entrada conviene poder reconocer el local y elegir hacia dónde avanzar. En Vitrina, la propuesta invita a comenzar por Mujer, continuar hacia Kids y completar la lectura por Hombre. La isla y las exhibiciones ayudan a conectar las zonas. Observá los cambios de dirección y si los muebles permiten ver qué hay más adelante. Las zonas calientes y frías deben analizarse según el comportamiento real de los visitantes; una imagen permite formular hipótesis, pero no demuestra por sí sola dónde se concentra la actividad.",
+          "objective": "Reconocer cómo el espacio orienta la mirada y el desplazamiento.",
+          "observationPoints": [
+            "Primera lectura desde la entrada.",
+            "Conexión entre lateral, fondo y retorno.",
+            "Muebles que orientan o interrumpen la visión."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés identificar qué elementos orientan la mirada y el recorrido?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 3,
+          "objective": "Reconocer cómo el espacio orienta la mirada y el desplazamiento.",
+          "body": "El recorrido se construye con líneas de visión, exhibiciones y puntos de interés. Desde la entrada conviene poder reconocer el local y elegir hacia dónde avanzar. En Vitrina, la propuesta invita a comenzar por Mujer, continuar hacia Kids y completar la lectura por Hombre. La isla y las exhibiciones ayudan a conectar las zonas. Observá los cambios de dirección y si los muebles permiten ver qué hay más adelante. Las zonas calientes y frías deben analizarse según el comportamiento real de los visitantes; una imagen permite formular hipótesis, pero no demuestra por sí sola dónde se concentra la actividad.",
+          "observe": [
+            "Primera lectura desde la entrada.",
+            "Conexión entre lateral, fondo y retorno.",
+            "Muebles que orientan o interrumpen la visión."
+          ],
+          "main": "IMG-14",
+          "extra": [
+            "IMG-15",
+            "IMG-16"
+          ],
+          "note": "Validar los giros con videos reales. Al mirar hacia la entrada se invierten los lados de pantalla, no los departamentos."
+        },
+        "previewAssetIds": [
+          "IMG-14",
+          "IMG-15",
+          "IMG-16"
+        ]
+      },
+      {
+        "id": "S04",
+        "title": "Punto focal y composición",
+        "order": 4,
+        "zoneIds": [
+          "Z02",
+          "Z05"
+        ],
+        "assetIds": [
+          "IMG-17",
+          "IMG-03"
+        ],
+        "curriculumUnits": [
+          "U3",
+          "U6"
+        ],
+        "sourceReferences": [
+          "Clase 4: 2–15; planificación, clase 3; programa Ricardo, unidad 3"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "Un punto focal organiza la atención dentro de una exhibición. La isla de Vitrina reúne libros de diseño, tres perfumes, prendas plegadas y complementos. La relación entre esos objetos puede leerse por su tamaño, altura, proximidad y espacio libre. Elegir un protagonista y agrupar piezas relacionadas ayuda a que la composición resulte comprensible. El equilibrio no exige que ambos lados sean idénticos: también puede construirse con distintos pesos visuales. Observá qué objeto se percibe primero y cómo el resto lo acompaña. Si todos los elementos compiten por igual, la lectura de la exhibición pierde claridad.",
+          "objective": "Identificar jerarquía, equilibrio y agrupación de productos.",
+          "observationPoints": [
+            "Protagonista y productos de apoyo.",
+            "Alturas, distancias y pesos visuales.",
+            "Espacio libre entre grupos de objetos."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés reconocer qué grupo de productos organiza la isla y cómo se relaciona con los demás?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 4,
+          "objective": "Identificar jerarquía, equilibrio y agrupación de productos.",
+          "body": "Un punto focal organiza la atención dentro de una exhibición. La isla de Vitrina reúne libros de diseño, tres perfumes, prendas plegadas y complementos. La relación entre esos objetos puede leerse por su tamaño, altura, proximidad y espacio libre. Elegir un protagonista y agrupar piezas relacionadas ayuda a que la composición resulte comprensible. El equilibrio no exige que ambos lados sean idénticos: también puede construirse con distintos pesos visuales. Observá qué objeto se percibe primero y cómo el resto lo acompaña. Si todos los elementos compiten por igual, la lectura de la exhibición pierde claridad.",
+          "observe": [
+            "Protagonista y productos de apoyo.",
+            "Alturas, distancias y pesos visuales.",
+            "Espacio libre entre grupos de objetos."
+          ],
+          "main": "IMG-17",
+          "extra": [],
+          "note": "Sin maniquíes centrales. Desarrollar equilibrio, pirámide y repetición con revisión docente."
+        },
+        "previewAssetIds": [
+          "IMG-17"
+        ]
+      },
+      {
+        "id": "S05",
+        "title": "Mobiliario y producto",
+        "order": 5,
+        "zoneIds": [
+          "Z02"
+        ],
+        "assetIds": [
+          "IMG-03",
+          "IMG-04",
+          "IMG-17"
+        ],
+        "curriculumUnits": [
+          "U7"
+        ],
+        "sourceReferences": [
+          "Clase 5: 3–19; clase 4: 5; clase 2: 24"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "El mobiliario debe responder al producto, al espacio y a la identidad del local. Los percheros permiten leer prendas colgadas; las mesas muestran piezas plegadas y conjuntos; las repisas acercan el calzado a la colección. En Mujer, observá cómo se relacionan prendas y complementos y si cada soporte ayuda a reconocerlos. Una exhibición clara necesita unidades ordenadas, producto preparado y una densidad que permita comparar sin ocultar las piezas. También conviene revisar mantenimiento, reposición y acceso. El mismo lenguaje de metal y materiales neutros une los departamentos, aunque cada categoría requiera distintas formas de presentación.",
+          "objective": "Elegir mobiliario y presentación según el producto.",
+          "observationPoints": [
+            "Prendas colgadas y plegadas.",
+            "Coordinación entre ropa y calzado.",
+            "Material, escala y capacidad del soporte."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés explicar por qué estos muebles son adecuados para las prendas y el calzado?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 5,
+          "objective": "Elegir mobiliario y presentación según el producto.",
+          "body": "El mobiliario debe responder al producto, al espacio y a la identidad del local. Los percheros permiten leer prendas colgadas; las mesas muestran piezas plegadas y conjuntos; las repisas acercan el calzado a la colección. En Mujer, observá cómo se relacionan prendas y complementos y si cada soporte ayuda a reconocerlos. Una exhibición clara necesita unidades ordenadas, producto preparado y una densidad que permita comparar sin ocultar las piezas. También conviene revisar mantenimiento, reposición y acceso. El mismo lenguaje de metal y materiales neutros une los departamentos, aunque cada categoría requiera distintas formas de presentación.",
+          "observe": [
+            "Prendas colgadas y plegadas.",
+            "Coordinación entre ropa y calzado.",
+            "Material, escala y capacidad del soporte."
+          ],
+          "main": "IMG-03",
+          "extra": [
+            "IMG-04"
+          ],
+          "note": "IMG-04 muestra una repisa baja. Resolver la pared de calzado Mujer o adaptar el alcance de la explicación."
+        },
+        "previewAssetIds": [
+          "IMG-03",
+          "IMG-04"
+        ]
+      },
+      {
+        "id": "S06",
+        "title": "Lineal, facing y niveles",
+        "order": 6,
+        "zoneIds": [
+          "Z03"
+        ],
+        "assetIds": [
+          "IMG-05",
+          "IMG-06"
+        ],
+        "curriculumUnits": [
+          "U7"
+        ],
+        "sourceReferences": [
+          "Clase 4: 20–21; clase 5: 19; unidad institucional 7"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "El lineal es el espacio de exhibición organizado para presentar productos. El facing se refiere a los frentes visibles que permiten reconocerlos. En Kids, la ropa y el calzado muestran cómo el orden, la altura y la orientación influyen en la lectura. Un producto puede verse con claridad y, sin embargo, quedar fuera del alcance de quien lo necesita. Por eso conviene estudiar visibilidad y acceso por separado. Observá qué unidades se muestran de frente, cómo se distribuyen entre niveles y qué relación tienen con el mobiliario infantil. Las medidas concretas deben verificarse para el público y el espacio de cada caso.",
+          "objective": "Distinguir presentación frontal, niveles y alcance.",
+          "observationPoints": [
+            "Frentes visibles y unidades legibles.",
+            "Distribución entre repisas.",
+            "Diferencia entre visibilidad y alcance."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés distinguir cómo la altura y la posición cambian la visibilidad del producto?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 6,
+          "objective": "Distinguir presentación frontal, niveles y alcance.",
+          "body": "El lineal es el espacio de exhibición organizado para presentar productos. El facing se refiere a los frentes visibles que permiten reconocerlos. En Kids, la ropa y el calzado muestran cómo el orden, la altura y la orientación influyen en la lectura. Un producto puede verse con claridad y, sin embargo, quedar fuera del alcance de quien lo necesita. Por eso conviene estudiar visibilidad y acceso por separado. Observá qué unidades se muestran de frente, cómo se distribuyen entre niveles y qué relación tienen con el mobiliario infantil. Las medidas concretas deben verificarse para el público y el espacio de cada caso.",
+          "observe": [
+            "Frentes visibles y unidades legibles.",
+            "Distribución entre repisas.",
+            "Diferencia entre visibilidad y alcance."
+          ],
+          "main": "IMG-05",
+          "extra": [
+            "IMG-06"
+          ],
+          "note": "No convertir porcentajes de venta o alturas de las diapositivas en reglas universales sin comprobar su fuente."
+        },
+        "previewAssetIds": [
+          "IMG-05",
+          "IMG-06"
+        ]
+      },
+      {
+        "id": "S07",
+        "title": "Color en la exhibición",
+        "order": 7,
+        "zoneIds": [
+          "Z03"
+        ],
+        "assetIds": [
+          "IMG-05",
+          "IMG-11B"
+        ],
+        "curriculumUnits": [
+          "U7"
+        ],
+        "sourceReferences": [
+          "Programa Ricardo, unidad 2; clase 6/7: 8"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "El color puede organizar una exhibición y ayudar a reconocer relaciones entre productos. En Kids, compará la disposición inicial con la agrupación por bloques de color. La repetición de tonos crea continuidad; el contraste puede destacar una pieza o separar conjuntos. Para describir una paleta, conviene distinguir matiz, valor y saturación: qué color es, qué tan claro u oscuro se percibe y qué tan intenso resulta. El entorno neutro permite observar esos cambios en las prendas. Elegí un criterio de agrupación y evaluá si facilita leer la colección y relacionar las piezas.",
+          "objective": "Reconocer cómo el color agrupa y ordena la colección.",
+          "observationPoints": [
+            "Organización inicial frente a bloques de color.",
+            "Repetición, contraste y continuidad.",
+            "Matiz, valor y saturación en las prendas."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés reconocer el criterio de color utilizado en Kids?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 7,
+          "objective": "Reconocer cómo el color agrupa y ordena la colección.",
+          "body": "El color puede organizar una exhibición y ayudar a reconocer relaciones entre productos. En Kids, compará la disposición inicial con la agrupación por bloques de color. La repetición de tonos crea continuidad; el contraste puede destacar una pieza o separar conjuntos. Para describir una paleta, conviene distinguir matiz, valor y saturación: qué color es, qué tan claro u oscuro se percibe y qué tan intenso resulta. El entorno neutro permite observar esos cambios en las prendas. Elegí un criterio de agrupación y evaluá si facilita leer la colección y relacionar las piezas.",
+          "observe": [
+            "Organización inicial frente a bloques de color.",
+            "Repetición, contraste y continuidad.",
+            "Matiz, valor y saturación en las prendas."
+          ],
+          "main": "IMG-11B",
+          "extra": [
+            "IMG-05"
+          ],
+          "note": "Comparación conceptual: también varían algunos productos y cantidades. Completar las armonías cromáticas con material revisado."
+        },
+        "previewAssetIds": [
+          "IMG-11B",
+          "IMG-05"
+        ]
+      },
+      {
+        "id": "S10",
+        "title": "Iluminación y comunicación",
+        "order": 8,
+        "zoneIds": [
+          "Z04",
+          "Z08"
+        ],
+        "assetIds": [
+          "IMG-07",
+          "IMG-08",
+          "IMG-12B"
+        ],
+        "curriculumUnits": [
+          "U2",
+          "U5"
+        ],
+        "sourceReferences": [
+          "Clase 6/7: 16–23; unidades institucionales 2 y 5"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "La iluminación permite orientarse y también dirige la atención. La luz general hace legible el espacio; los acentos destacan una exhibición o un producto. En Hombre, IMG-07 presenta acentos y IMG-12B una iluminación más uniforme. Compará dónde se concentra la mirada y cómo se perciben prendas, zapatos y sombras. La comunicación gráfica debe acompañar esa lectura y mantener relación con la identidad del local. Conviene revisar que el producto siga siendo visible, que los brillos no molesten y que los mensajes se entiendan. La evaluación técnica de la luz requiere mediciones y especificaciones que estas imágenes no aportan.",
+          "objective": "Diferenciar luz general, acentos y comunicación.",
+          "observationPoints": [
+            "Luz general frente a acentos sobre producto.",
+            "Sombras, contraste y legibilidad del calzado.",
+            "Relación entre exhibición y mensajes."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés distinguir qué luz permite orientarse y cuál destaca el producto?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 8,
+          "objective": "Diferenciar luz general, acentos y comunicación.",
+          "body": "La iluminación permite orientarse y también dirige la atención. La luz general hace legible el espacio; los acentos destacan una exhibición o un producto. En Hombre, IMG-07 presenta acentos y IMG-12B una iluminación más uniforme. Compará dónde se concentra la mirada y cómo se perciben prendas, zapatos y sombras. La comunicación gráfica debe acompañar esa lectura y mantener relación con la identidad del local. Conviene revisar que el producto siga siendo visible, que los brillos no molesten y que los mensajes se entiendan. La evaluación técnica de la luz requiere mediciones y especificaciones que estas imágenes no aportan.",
+          "observe": [
+            "Luz general frente a acentos sobre producto.",
+            "Sombras, contraste y legibilidad del calzado.",
+            "Relación entre exhibición y mensajes."
+          ],
+          "main": "IMG-07",
+          "extra": [
+            "IMG-12B",
+            "IMG-08"
+          ],
+          "note": "Las etiquetas de luz deben conservar este sentido. Desarrollar ejemplos de luz de tareas y decorativa."
+        },
+        "previewAssetIds": [
+          "IMG-07",
+          "IMG-12B",
+          "IMG-08"
+        ]
+      },
+      {
+        "id": "S08",
+        "title": "Planificar la vidriera",
+        "order": 9,
+        "zoneIds": [
+          "Z06",
+          "Z07"
+        ],
+        "assetIds": [
+          "IMG-09",
+          "IMG-02"
+        ],
+        "curriculumUnits": [
+          "U3"
+        ],
+        "sourceReferences": [
+          "Clase 6/7: 2–15, 24–30; unidad institucional 3"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "La vidriera comunica una selección de la propuesta de la tienda. Antes de componerla conviene definir a quién se dirige, qué se quiere mostrar y con qué objetivo. En la vidriera Mujer, observá los outfits, los maniquíes y la relación entre alturas y espacio libre. El conjunto debe permitir reconocer un mensaje principal y conectar con el interior. El tema de una campaña y la configuración espacial de la vidriera son decisiones diferentes: una trata de la idea que se comunica; la otra, de cómo se relaciona la exhibición con el local y la calle.",
+          "objective": "Vincular la vidriera con público, producto y objetivo.",
+          "observationPoints": [
+            "Outfits, maniquíes y elemento protagonista.",
+            "Público y objetivo de la selección.",
+            "Continuidad entre vidriera e interior."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés relacionar esta vidriera con su público, objetivo y productos?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 9,
+          "objective": "Vincular la vidriera con público, producto y objetivo.",
+          "body": "La vidriera comunica una selección de la propuesta de la tienda. Antes de componerla conviene definir a quién se dirige, qué se quiere mostrar y con qué objetivo. En la vidriera Mujer, observá los outfits, los maniquíes y la relación entre alturas y espacio libre. El conjunto debe permitir reconocer un mensaje principal y conectar con el interior. El tema de una campaña y la configuración espacial de la vidriera son decisiones diferentes: una trata de la idea que se comunica; la otra, de cómo se relaciona la exhibición con el local y la calle.",
+          "observe": [
+            "Outfits, maniquíes y elemento protagonista.",
+            "Público y objetivo de la selección.",
+            "Continuidad entre vidriera e interior."
+          ],
+          "main": "IMG-09",
+          "extra": [],
+          "note": "Añadir una consigna de campaña concreta. Los maniquíes se reservan a las vidrieras."
+        },
+        "previewAssetIds": [
+          "IMG-09"
+        ]
+      },
+      {
+        "id": "S09",
+        "title": "De la referencia al concepto",
+        "order": 10,
+        "zoneIds": [
+          "Z06",
+          "Z07"
+        ],
+        "assetIds": [
+          "IMG-13",
+          "IMG-09"
+        ],
+        "curriculumUnits": [
+          "U4",
+          "U5"
+        ],
+        "sourceReferences": [
+          "Unidades institucionales 4–5; planificación, clases 4–5; programa Ricardo, unidades 3–4; clase 6/7: 6–13"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "Un concepto no consiste solamente en reunir imágenes atractivas. Las referencias deben traducirse en decisiones de materiales, paleta, producto, composición y comunicación. El moodboard de Vitrina permite relacionar fachada, interior, isla, muestras y boceto. Para desarrollar una campaña, conviene escribir una idea central y justificar qué se toma de cada referencia. Después se prueba en un boceto y se contrasta con el espacio disponible, el presupuesto y el calendario. Esa secuencia ayuda a mantener coherencia entre la intención y la ejecución. Registrar los cambios permite explicar por qué la propuesta final toma determinada forma.",
+          "objective": "Transformar referencias en decisiones de diseño.",
+          "observationPoints": [
+            "Relación entre referencias y decisiones.",
+            "Materiales, paleta y boceto.",
+            "Concepto aplicado a la tienda."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés explicar qué referencias y decisiones sostienen el concepto de la campaña?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 10,
+          "objective": "Transformar referencias en decisiones de diseño.",
+          "body": "Un concepto no consiste solamente en reunir imágenes atractivas. Las referencias deben traducirse en decisiones de materiales, paleta, producto, composición y comunicación. El moodboard de Vitrina permite relacionar fachada, interior, isla, muestras y boceto. Para desarrollar una campaña, conviene escribir una idea central y justificar qué se toma de cada referencia. Después se prueba en un boceto y se contrasta con el espacio disponible, el presupuesto y el calendario. Esa secuencia ayuda a mantener coherencia entre la intención y la ejecución. Registrar los cambios permite explicar por qué la propuesta final toma determinada forma.",
+          "observe": [
+            "Relación entre referencias y decisiones.",
+            "Materiales, paleta y boceto.",
+            "Concepto aplicado a la tienda."
+          ],
+          "main": "IMG-13",
+          "extra": [],
+          "note": "Este moodboard es ilustrativo; no documenta un proceso histórico real ni un plano a escala. Falta un caso completo de campaña."
+        },
+        "previewAssetIds": [
+          "IMG-13"
+        ]
+      },
+      {
+        "id": "S11",
+        "title": "Observar, mejorar y proyectar",
+        "order": 11,
+        "zoneIds": [
+          "Z01",
+          "Z08",
+          "Z09"
+        ],
+        "assetIds": [
+          "IMG-01",
+          "IMG-10"
+        ],
+        "curriculumUnits": [
+          "U8"
+        ],
+        "sourceReferences": [
+          "Unidad institucional 8; planificación, clase 8; programa Ricardo, unidades 4–6"
+        ],
+        "status": "editorial_draft_needs_teacher_review",
+        "content": {
+          "body": "Una auditoría del local relaciona observaciones con oportunidades de mejora. En caja y en los accesos a probadores, revisá orientación, circulación, atención y lectura de los servicios. Describí primero lo que se puede observar y después proponé una mejora con un motivo concreto. Para evaluar comodidad interior, tiempos de atención o comportamiento de compra harían falta otros recursos y datos. El cierre también invita a pensar cómo se presenta un proyecto en un portfolio y cómo se consideran mantenimiento, reutilización y tecnología. Una propuesta sólida distingue lo observado, lo supuesto y lo que necesita comprobarse.",
+          "objective": "Observar el local y argumentar mejoras.",
+          "observationPoints": [
+            "Orientación hacia caja y probadores.",
+            "Pasos libres y atención al cliente.",
+            "Una mejora concreta y su justificación."
+          ],
+          "examples": [],
+          "status": "editorial_draft_needs_teacher_review",
+          "reviewed": false
+        },
+        "checkpoint": {
+          "type": "self_confirmation",
+          "question": "¿Podés identificar una decisión que revisarías y argumentar qué mejorarías?",
+          "onYes": {
+            "message": "Listo. Podés continuar.",
+            "completeCurrent": true,
+            "unlock": "next_in_explicit_order"
+          },
+          "onNo": {
+            "message": "Volvé a observar la exhibición y repasá la explicación antes de continuar.",
+            "completeCurrent": false,
+            "unlockNext": false,
+            "action": "review_current"
+          },
+          "isGraded": false
+        },
+        "visualStatus": "revised_assets_prepared",
+        "draft": {
+          "order": 11,
+          "objective": "Observar el local y argumentar mejoras.",
+          "body": "Una auditoría del local relaciona observaciones con oportunidades de mejora. En caja y en los accesos a probadores, revisá orientación, circulación, atención y lectura de los servicios. Describí primero lo que se puede observar y después proponé una mejora con un motivo concreto. Para evaluar comodidad interior, tiempos de atención o comportamiento de compra harían falta otros recursos y datos. El cierre también invita a pensar cómo se presenta un proyecto en un portfolio y cómo se consideran mantenimiento, reutilización y tecnología. Una propuesta sólida distingue lo observado, lo supuesto y lo que necesita comprobarse.",
+          "observe": [
+            "Orientación hacia caja y probadores.",
+            "Pasos libres y atención al cliente.",
+            "Una mejora concreta y su justificación."
+          ],
+          "main": "IMG-10",
+          "extra": [],
+          "note": "La imagen no muestra el interior de los probadores. Ampliar profesión, sustentabilidad y tecnología con fuentes y ejemplos revisados."
+        },
+        "previewAssetIds": [
+          "IMG-10"
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "id": "IMG-01",
+        "title": "Vista general elevada",
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z03",
+          "Z04",
+          "Z05",
+          "Z08",
+          "Z09"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-01-general-v02.png",
+        "webFile": "web/img-01-general-v02.webp",
+        "approved": false,
+        "altText": "Vista elevada de una tienda gris con Mujer a la izquierda, Kids al fondo izquierdo, Hombre a la derecha e isla central con libros y perfumes. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Elevada frontal desde acceso; recurso de orientación, fuera del paseo a nivel.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "2. Espacio y distribución",
+          "observed": "Permite leer los departamentos y la circulación alrededor de la isla.",
+          "note": "La vista elevada sirve de apoyo al plano; las medidas y la trayectoria exacta requieren calibración.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "0ed925f9494d2cdbd1e3196c7e0ded7022ac781d4f95f4f651fba00537a4a024"
+      },
+      {
+        "id": "IMG-02",
+        "title": "Fachada completa",
+        "zoneIds": [
+          "Z01",
+          "Z06",
+          "Z07"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-02-fachada-v02.png",
+        "webFile": "web/img-02-fachada-v02.webp",
+        "approved": false,
+        "altText": "Fachada de Vitrina con acceso central, vidriera de Mujer a la izquierda y Hombre a la derecha. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Exterior frontal hacia el acceso.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "1. Marca y experiencia",
+          "observed": "Fachada alta y acristalada, perfilería grafito, acceso y vidrieras coherentes con la propuesta minimalista.",
+          "note": "Puede explicar identidad y primera impresión; no acredita medidas constructivas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "74c9d5faf617691b0ba9bab2f177b4ae3056b5d6f194651c648a5465029208ec"
+      },
+      {
+        "id": "IMG-03",
+        "title": "Mujer",
+        "zoneIds": [
+          "Z02",
+          "Z05"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-03-mujer-v02.png",
+        "webFile": "web/img-03-mujer-v02.webp",
+        "approved": false,
+        "altText": "Zona Mujer con prendas claras y negras, calzado sobre repisas metálicas e isla editorial. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Pasillo izquierdo hacia Mujer y continuidad a Kids.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 38,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "5. Mobiliario y producto",
+          "observed": "Prendas, percheros y complementos permiten explicar selección, agrupación y composición.",
+          "note": "Comparar con la vista general al preparar la transición: los renders presentan variaciones de producto.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "ecdfaa516a5226b36e4177b807cb3ba0abc8e517ed23dfb6fd98eb4b4caeb847"
+      },
+      {
+        "id": "IMG-04",
+        "title": "Calzado Mujer",
+        "zoneIds": [
+          "Z02"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-04-calzado-mujer-v02.png",
+        "webFile": "web/img-04-calzado-mujer-v02.webp",
+        "approved": false,
+        "altText": "Calzado Mujer sobre una repisa metálica baja bajo prendas colgadas, en el lateral izquierdo del local minimalista.",
+        "camera": {
+          "description": "Acercamiento al módulo de calzado de Mujer.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 40,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "5. Mobiliario y producto",
+          "observed": "Muestra coordinación entre prendas y zapatos sobre una repisa metálica baja.",
+          "note": "Cumple parcialmente la idea de una pared de calzado: no muestra una pared independiente con varios niveles. Adaptar el texto o producir una vista adicional.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "857142722cfba5062b349851b02538489783e476c45e2bfc616040648a9ecdc4"
+      },
+      {
+        "id": "IMG-05",
+        "title": "Kids",
+        "zoneIds": [
+          "Z03"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-05-kids-v02.png",
+        "webFile": "web/img-05-kids-v02.webp",
+        "approved": false,
+        "altText": "Zona Kids con ropa en crema, negro y salvia, mesa baja, calzado al fondo y piezas de diseño próximas.",
+        "camera": {
+          "description": "Pasillo izquierdo hacia el rincón Kids.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 45,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "6. Lineal, facing y niveles; 7. Color",
+          "observed": "Escala infantil, mesa baja y colección organizada; base de la comparación de color.",
+          "note": "La altura y accesibilidad no pueden medirse en la imagen.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "616cf911a58e6da29a8b9ef7dcc8297b11d4dc239587fa637c5c444c10049a5d"
+      },
+      {
+        "id": "IMG-06",
+        "title": "Calzado Kids",
+        "zoneIds": [
+          "Z03"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-06-calzado-kids-v02.png",
+        "webFile": "web/img-06-calzado-kids-v02.webp",
+        "approved": false,
+        "altText": "Detalle frontal de los niveles del módulo de calzado y ropa infantil en el fondo izquierdo; mesa Kids parcialmente visible.",
+        "camera": {
+          "description": "Acercamiento al mural Kids del fondo.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 55,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "6. Lineal, facing y niveles",
+          "observed": "Productos frontales sobre varios niveles permiten explicar facing y visibilidad.",
+          "note": "La repisa superior es alta; tratar visibilidad y alcance como conceptos distintos. Añadir diagramas para explicar medidas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "e1c20b1e00b67873e60109d615f15f5a4a6343af21de3c589850ae92e85da18f"
+      },
+      {
+        "id": "IMG-07",
+        "title": "Hombre",
+        "zoneIds": [
+          "Z04"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-07-hombre-v02.png",
+        "webFile": "web/img-07-hombre-v02.webp",
+        "approved": false,
+        "altText": "Zona Hombre con chaquetas oscuras, camisas claras y calzado en repisas del lateral derecho. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Pasillo derecho hacia Hombre y el fondo.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 70,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Los acentos y la luz sobre la exhibición destacan productos y jerarquías.",
+          "note": "En la comparación de luz esta imagen corresponde a iluminación con acentos.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "32502067a9a50ffcde4b0c303980a225e337e7df0032618b45087d3f5d5c5678",
+        "lightingComparisonRole": "accent_lighting"
+      },
+      {
+        "id": "IMG-08",
+        "title": "Calzado Hombre",
+        "zoneIds": [
+          "Z04"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-08-calzado-hombre-v02.png",
+        "webFile": "web/img-08-calzado-hombre-v02.webp",
+        "approved": false,
+        "altText": "Detalle del calzado de Hombre junto a camisas y chaquetas de la misma colección. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Acercamiento al módulo de calzado de Hombre.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 75,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Repisas con zapatos permiten observar luz, sombras y visibilidad del producto.",
+          "note": "El PNG es válido. El WebP vacío del ZIP fue reconstruido a partir de ese PNG.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "8afd4d0b279fc7c0fab1d4c1aa9bdb518586a7038d8626a0925a681c291caa9e"
+      },
+      {
+        "id": "IMG-09",
+        "title": "Vidriera Mujer",
+        "zoneIds": [
+          "Z06",
+          "Z07"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-09-vidriera-mujer-v02.png",
+        "webFile": "web/img-09-vidriera-mujer-v02.webp",
+        "approved": false,
+        "altText": "Vidriera de Mujer con dos maniquíes, conjuntos coordinados y producto sobre plataforma metálica. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Exterior próximo a vidriera Mujer.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 37,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "9. Planificar la vidriera",
+          "observed": "Maniquíes y outfits permiten analizar composición, público y objetivo de exhibición.",
+          "note": "La selección debe acompañarse con una consigna concreta; la imagen no demuestra resultados comerciales.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "d5cdbc86043259ac329203332b89c59c7ff545aca262c66dd5a272f566f3d136"
+      },
+      {
+        "id": "IMG-10",
+        "title": "Caja y probadores",
+        "zoneIds": [
+          "Z08",
+          "Z09"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-10-caja-probadores-v02.png",
+        "webFile": "web/img-10-caja-probadores-v02.webp",
+        "approved": false,
+        "altText": "Caja metálica y dos puertas de probadores; una escultura y un sillón acompañan el área.",
+        "camera": {
+          "description": "Pasaje del fondo hacia caja y probadores.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 57,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "11. Observar, mejorar y proyectar",
+          "observed": "Muestra atención, orientación, circulación y accesos a probadores.",
+          "note": "No muestra el interior de los probadores. La comodidad interior, accesibilidad y otras dimensiones de la auditoría requieren contenido adicional.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "98e7f369257d1252c2e9de908c29d4b480b8e224ddd27c17df8534cc53a6b22c"
+      },
+      {
+        "id": "IMG-14",
+        "title": "Entrada interior",
+        "zoneIds": [
+          "Z01"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-14-entrada-v02.png",
+        "webFile": "web/img-14-entrada-v02.webp",
+        "approved": false,
+        "altText": "Vista interior desde el acceso con la isla al centro y los tres departamentos alrededor. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Interior desde entrada hacia fondo.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "3. Recorrido del cliente",
+          "observed": "Explica primera lectura, líneas de visión, orientación y puntos de interés.",
+          "note": "Usar para introducir el recorrido Mujer izquierda → Kids fondo izquierdo → Hombre derecha.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "361673a7a2dfd60be3194145d3d9aba8577aa9a0207c6711df0ed39580ebd2ed"
+      },
+      {
+        "id": "IMG-15",
+        "title": "Giro hacia el lateral derecho",
+        "zoneIds": [
+          "Z03",
+          "Z04",
+          "Z08"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-15-giro-fondo-v02.png",
+        "webFile": "web/img-15-giro-fondo-v02.webp",
+        "approved": false,
+        "altText": "Vista del pasaje del fondo que relaciona Kids, caja y el lateral de Hombre. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Vista intermedia del pasaje del fondo hacia el lateral derecho.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 65,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "Apoyo al 3. Recorrido del cliente",
+          "observed": "Apoya la conexión espacial entre Kids, el fondo y Hombre.",
+          "note": "El encuadre por sí solo no valida el giro completo; revisar el empalme al crear el video.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "4d11c874a585f3007c3f4ff6f7aa7db7603d4232af2f4c64a3e54cd7351e8164"
+      },
+      {
+        "id": "IMG-16",
+        "title": "Regreso al frente",
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z04",
+          "Z06",
+          "Z07"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-16-retorno-frente-v02.png",
+        "webFile": "web/img-16-retorno-frente-v02.webp",
+        "approved": false,
+        "altText": "Vista desde el interior hacia la entrada; Hombre aparece a la izquierda de la imagen y Mujer a la derecha. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Vista inversa hacia el acceso. Izquierda/derecha de pantalla se invierten.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "Apoyo al recorrido y al 9. Vidriera",
+          "observed": "Prepara el retorno a la entrada y la transición hacia las vidrieras.",
+          "note": "Al mirar hacia la entrada se invierten los lados de pantalla: no cambia la ubicación real de Mujer y Hombre.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "57776cc416cd2313a2551ce84813868af66bd674f0145b8a0d24bef1c307596c"
+      },
+      {
+        "id": "IMG-17",
+        "title": "Isla editorial · libros y perfumes",
+        "zoneIds": [
+          "Z05"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-17-isla-editorial-v02.png",
+        "webFile": "web/img-17-isla-editorial-v02.webp",
+        "approved": false,
+        "altText": "Mesa central de acero con libros de diseño y arquitectura, tres perfumes, prendas neutras, bolso y zapatillas; sin maniquíes centrales. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Acercamiento ambiental a la isla central.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 55,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image"
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "4. Punto focal y composición; apoyo al 5",
+          "observed": "Libros, tres perfumes, prendas plegadas, bolso y zapatillas permiten explicar jerarquía, equilibrio, alturas y espacio libre.",
+          "note": "Coincide con la isla actualizada sin maniquíes centrales. Mantener objetos y geometría al preparar transiciones.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "b0b53981c985e3beaebca3ad3982cf9488c3afd97378e634a2737ef2d9a9e8f4"
+      },
+      {
+        "id": "IMG-11B",
+        "title": "Color Kids · agrupación tonal",
+        "zoneIds": [
+          "Z03"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-11b-color-kids-b-v02.png",
+        "webFile": "web/img-11b-color-kids-b-v02.webp",
+        "approved": false,
+        "altText": "Vista de Kids con prendas agrupadas por bloques de tonos claros, salvia y negro.",
+        "camera": {
+          "description": "Mismo encuadre de referencia que IMG-05.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 45,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "7. Color en la exhibición",
+          "observed": "Permite comparar IMG-05 con prendas agrupadas por bloques de color.",
+          "note": "Comparación conceptual: también cambian algunos productos y cantidades; no presentarla como un experimento con el mismo inventario exacto.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "3fd9d202e1dcb73e788030e424b303a3fee260742f045472e65b278c0f4a3823"
+      },
+      {
+        "id": "IMG-12B",
+        "title": "Iluminación Hombre · luz general",
+        "zoneIds": [
+          "Z04"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-12b-luz-hombre-b-v02.png",
+        "webFile": "web/img-12b-luz-hombre-b-v02.webp",
+        "approved": false,
+        "altText": "Vista de Hombre con luz general uniforme y menor énfasis de la iluminación de acento. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Mismo encuadre de referencia que IMG-07.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 70,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "assetType": "store_render",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Permite comparar una luz más uniforme con los acentos visibles en IMG-07.",
+          "note": "Etiquetas correctas: IMG-07 = con acentos; IMG-12B = general/uniforme. No se suministran mediciones fotométricas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "0279db759afebdf7862e0eaa08da08b6a72e7c6f412620b6369aaae82867ca3c",
+        "lightingComparisonRole": "uniform_general_lighting"
+      },
+      {
+        "id": "IMG-13",
+        "title": "De la referencia al concepto · moodboard de proceso",
+        "zoneIds": [
+          "Z06",
+          "Z07",
+          "Z05"
+        ],
+        "status": "generated_revised",
+        "sourceFile": "originales/img-13-proceso-concepto-v02.png",
+        "webFile": "web/img-13-proceso-concepto-v02.webp",
+        "approved": false,
+        "altText": "Moodboard conceptual de Vitrina con imágenes del frente alto, interior e isla, boceto expresivo y muestras de cemento, metal y textiles.",
+        "camera": {
+          "description": "Recurso gráfico de proceso separado del recorrido físico.",
+          "calibrated": false
+        },
+        "mobileCrop": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image"
+        },
+        "hotspots": [],
+        "assetType": "process_moodboard",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "10. De la referencia al concepto",
+          "observed": "Relaciona referencias de arquitectura, materiales, paleta, boceto e interior.",
+          "note": "Moodboard ilustrativo generado: no es un registro histórico del proceso ni un plano técnico a escala.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "54e0f2b831b1a9d8fd4395760fe6c4b7da051b63da341a816d27c23c00b4c9f4"
+      },
+      {
+        "id": "IMG-11",
+        "title": "Color en Kids",
+        "status": "generated_revised_comparison",
+        "zoneIds": [
+          "Z03"
+        ],
+        "sourceFile": "originales/img-05-kids-v02.png",
+        "webFile": "web/img-05-kids-v02.webp",
+        "approved": false,
+        "variants": [
+          "a",
+          "b"
+        ],
+        "variantAssetIds": {
+          "a": "IMG-05",
+          "b": "IMG-11B"
+        },
+        "assetType": "store_render_comparison",
+        "variantLabels": {
+          "a": "Organización inicial (IMG-05)",
+          "b": "Bloques de color (IMG-11B)"
+        },
+        "reviewNote": "Comparación conceptual; productos y cantidades no son exactamente idénticos."
+      },
+      {
+        "id": "IMG-12",
+        "title": "Iluminación en Hombre",
+        "status": "generated_revised_comparison",
+        "zoneIds": [
+          "Z04"
+        ],
+        "sourceFile": "originales/img-07-hombre-v02.png",
+        "webFile": "web/img-07-hombre-v02.webp",
+        "approved": false,
+        "variants": [
+          "a",
+          "b"
+        ],
+        "variantAssetIds": {
+          "a": "IMG-07",
+          "b": "IMG-12B"
+        },
+        "assetType": "store_render_comparison",
+        "variantLabels": {
+          "a": "Con acentos (IMG-07)",
+          "b": "General/uniforme (IMG-12B)"
+        }
+      }
+    ],
+    "navigation": {
+      "mode": "guided_scroll",
+      "advance": "yes_confirms_then_continue_button",
+      "no": "inline_feedback_and_review_current",
+      "completedSectionsRevisitable": true,
+      "scrollTrap": false,
+      "progressStorage": "same_device_proposed_not_implemented",
+      "crossDeviceSync": "not_requested",
+      "grading": "not_enabled"
+    },
+    "implementation": {
+      "repository": "https://github.com/midudev/mcp-higgsfield-landing",
+      "stack": "Astro / GSAP ScrollTrigger / Lenis (referencia revisada)",
+      "renderMode": "still_to_still_video_scroll_proposed",
+      "decisionStatus": "reference_reviewed_vitrina_integration_not_implemented",
+      "firstIntegration": "one approved view plus a content panel, yes/no state and revisit",
+      "imageHotspotCoordinates": "normalized [0,1] per final image; not store metres",
+      "threeDimensionalHotspots": "world coordinates or scene node references if 3D mode is chosen",
+      "proposedPaths": {
+        "project": "docs/project.md",
+        "course": "src/content/course.json",
+        "layout": "src/config/store-layout.json",
+        "scenes": "src/config/scene-manifest.json",
+        "webAssets": "public/assets/store/"
+      },
+      "validation": [
+        "correct explicit course order",
+        "all three footwear walls retained",
+        "consistent geometry and furniture across views",
+        "yes unlocks only next section",
+        "no preserves completed sections and leaves next locked",
+        "responsive image crops and readable text",
+        "keyboard and reduced movement",
+        "asset loading and progress persistence"
+      ]
+    },
+    "pendingContent": [
+      "colour theory and harmonies",
+      "facing definition and application",
+      "optical balance, pyramid, repetition",
+      "complete research/moodboard/sketch/audit example",
+      "profession, sustainability and current technology",
+      "academic TP/evaluation scope and conflicting programme criteria"
+    ],
+    "sources": {
+      "archiveFile": "Cursada Material-20261012T173706Z-1-001.zip",
+      "archiveLibraryFileId": "libfile_aa2173c048808191a338019961872510",
+      "notionProject": "https://app.notion.com/p/3f38350307db8124a04bf928ea6cdc4f",
+      "notionRoadmap": "https://app.notion.com/p/3f78350307db8177800beefd18e7faa7",
+      "notionInventory": "https://app.notion.com/p/3f48350307db8195800dc0588ac28408",
+      "figma": "https://www.figma.com/design/JxNpbms2RxDh3S8w8Rezf2"
+    },
+    "generation": {
+      "masterPrompt": "Use case: precise-object-edit with architectural outpainting and camera reframing. MAIN EDIT SOURCE is input image 1, the selected updated VITRINA steel island. Preserve that exact island merchandising as the source of this redesign: large stainless slab table, open architecture book at front-left, closed DESIGN/ARCHITECTURE book stack left-middle, THREE clear/amber/smoky perfume bottles on a thin steel tray toward rear-middle, cream knit stack rear-left, black knit stack rear-right, folded white shirt right-middle, small black bag right-front and white trainers front-right. NO MANNEQUINS at this central island. Expand/reframe around this edited source to show the whole shop from OUTSIDE. Input 2 is ONLY an architectural style reference for a taller and more architecturally substantial glazed storefront; do not copy its fake brand text, colours, screen buttons or product assortment. Input 3 is the OLD Vitrina spatial reference: preserve department relationships and existing key furniture locations but upgrade architecture/height and REPLACE old central island merchandise/mannequins with input 1.\nOUTPUT: one exceptionally polished photorealistic 16:9 landscape hero cover image for an interactive visual merchandising course. Full-bleed, no interface, arrows, collage, border or watermark. Camera outside at a gentle three-quarter angle, far enough back to show entire tall storefront, central entrance and a short side-glazing return. Straight architectural verticals, realistic 28mm photography. A visually generous grand retail volume with approximately 8m frontage and 12m depth, new ceiling/glazing height about 4.6m. One single tall retail level, not two floors. Show full height facade and substantial ceiling design: slim graphite steel structural frames, FLOOR-TO-CEILING clear glass, a deep graphite canopy/recess, finely spaced vertical brushed-metal fins at the outer facade edges, grey concrete architectural frame. Ceiling inside has longitudinal dark-metal slender baffles and integrated continuous white light lines, mixed with small neutral black track lights. Materials luxurious and precise: grey microcement, brushed steel, clear glass, graphite, tactile fabric. Fashion architecture gallery, sober Armani Exchange sensibility, industrial sculptural Diesel Home/Moroso inspired accent furniture. Ambient neutral 4000K lighting, limited warmer highlights on products, calm contemporary mood, architecture crisp rather than muddy/dark.\nLAYOUT as seen entering from street: large WOMEN display window LEFT of centred open double-glass entrance, large MEN display window RIGHT; inside WOMEN front/middle LEFT, KIDS at BACK LEFT with genuinely child-sized muted sage/cream/black clothes and separate back-left shoe wall, MEN front/middle RIGHT with right-wall footwear. Same sculptural black upholstered chrome-base chair and polished dark loop sculpture on cube near back centre-left of the same rear-centre/right steel checkout, square monochrome art behind checkout and two graphite fitting doors at back-right. Central long steel island from input1 visible through entry, fairly sparse as in that input, no central mannequins. Do not add more islands, lounge groups or random decor. Front side glazing return only reaches the front 2m; department footwear side walls remain solid farther back.\nWINDOW COMPOSITIONS: two premium matte cream mannequins WITH subtle featureless heads in EACH front display window, only four window mannequins total, standing on a very low brushed-steel plinth. Left coordinated WOMEN outfits: sharp cropped ivory jacket over white top and long black skirt; second sculptural all-black tailored outfit. Right MEN: sharp charcoal jacket over white shirt with relaxed tailored black trousers, and second contemporary black/cream coordinated look. Sophisticated editorial styling with clean fit, no old headless central-island mannequin duo. Windows include just one carefully placed shoe pair/small accessory, generous negative space, clothes remain primary. One discreet physical sign on facade reads exactly VITRINA in refined widely spaced uppercase metal letters; no other signage or brands. Wide uncluttered grey stone concourse outside, no crowds/cars or decorative trees. The facade must feel expansive, tall, designed and premium, visibly informed by input2, with the UPDATED ISLAND from edit source1 still identifiable inside.",
+      "masterStatus": "revised_generated_not_approved",
+      "toolMode": "built_in_image_gen"
+    },
+    "visualReview": {
+      "reviewVersion": "4.1",
+      "reviewedAt": "2026-10-13T21:27:24-03:00",
+      "reviewer": "assistant",
+      "notionGallery": "https://app.notion.com/p/3f98350307db81dba626d304f560b727",
+      "imageCount": 17,
+      "courseThemeCount": 11,
+      "transitionCount": 13,
+      "result": "coherent_style_and_teaching_support_with_pending_visual_adjustments",
+      "userApproval": "pending",
+      "continuousWalkthrough": "pending_video_generation_and_validation",
+      "technicalRepair": {
+        "file": "web/img-08-calzado-hombre-v02.webp",
+        "reason": "empty_file_in_source_archive",
+        "source": "originales/img-08-calzado-hombre-v02.png",
+        "format": "WEBP",
+        "size": [
+          1600,
+          900
+        ],
+        "quality": 86,
+        "sha256": "8afd4d0b279fc7c0fab1d4c1aa9bdb518586a7038d8626a0925a681c291caa9e"
+      }
+    }
+  },
+  "visualMap": {
+    "schemaVersion": "1.1",
+    "project": "Vitrina",
+    "visualBatchVersion": "4.0",
+    "date": "2026-10-13",
+    "status": "visuals_reviewed_with_notes_content_and_videos_pending",
+    "repositoryReference": {
+      "url": "https://github.com/midudev/mcp-higgsfield-landing",
+      "commit": "da1bbe693ef1939794662e96c0ba6571e9c3f418",
+      "site": "https://arko-sushi.midudev.workers.dev/",
+      "observedImplementation": "Astro; GSAP ScrollTrigger and Lenis; scroll sets active MP4 currentTime; still posters; focus per stop; reduced-motion image fallback."
+    },
+    "assets": [
+      {
+        "id": "IMG-01",
+        "title": "Vista general elevada",
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z03",
+          "Z04",
+          "Z05",
+          "Z08",
+          "Z09"
+        ],
+        "originalFile": "originales/img-01-general-v02.png",
+        "webFile": "web/img-01-general-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista elevada de una tienda gris con Mujer a la izquierda, Kids al fondo izquierdo, Hombre a la derecha e isla central con libros y perfumes. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Elevada frontal desde acceso; recurso de orientación, fuera del paseo a nivel.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "06232fd4a2939b54a432d3bcb686b51050ff18d1e22ed7ec4cbce373c0b435a9",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "2. Espacio y distribución",
+          "observed": "Permite leer los departamentos y la circulación alrededor de la isla.",
+          "note": "La vista elevada sirve de apoyo al plano; las medidas y la trayectoria exacta requieren calibración.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "0ed925f9494d2cdbd1e3196c7e0ded7022ac781d4f95f4f651fba00537a4a024"
+      },
+      {
+        "id": "IMG-02",
+        "title": "Fachada completa",
+        "zoneIds": [
+          "Z01",
+          "Z06",
+          "Z07"
+        ],
+        "originalFile": "originales/img-02-fachada-v02.png",
+        "webFile": "web/img-02-fachada-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Fachada de Vitrina con acceso central, vidriera de Mujer a la izquierda y Hombre a la derecha. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Exterior frontal hacia el acceso.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "0d7baa8f8f09a86bfe0182ab8bfdb4fb50a7ec01a7f8a724e83fb62787a2d7b8",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "1. Marca y experiencia",
+          "observed": "Fachada alta y acristalada, perfilería grafito, acceso y vidrieras coherentes con la propuesta minimalista.",
+          "note": "Puede explicar identidad y primera impresión; no acredita medidas constructivas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "74c9d5faf617691b0ba9bab2f177b4ae3056b5d6f194651c648a5465029208ec"
+      },
+      {
+        "id": "IMG-03",
+        "title": "Mujer",
+        "zoneIds": [
+          "Z02",
+          "Z05"
+        ],
+        "originalFile": "originales/img-03-mujer-v02.png",
+        "webFile": "web/img-03-mujer-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          940
+        ],
+        "altText": "Zona Mujer con prendas claras y negras, calzado sobre repisas metálicas e isla editorial. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Pasillo izquierdo hacia Mujer y continuidad a Kids.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 38,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "49497ae0bbcccb80e19c119dff248594bed85b4fc2c7f329c9a4ccd75c6849ac",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "5. Mobiliario y producto",
+          "observed": "Prendas, percheros y complementos permiten explicar selección, agrupación y composición.",
+          "note": "Comparar con la vista general al preparar la transición: los renders presentan variaciones de producto.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "ecdfaa516a5226b36e4177b807cb3ba0abc8e517ed23dfb6fd98eb4b4caeb847"
+      },
+      {
+        "id": "IMG-04",
+        "title": "Calzado Mujer",
+        "zoneIds": [
+          "Z02"
+        ],
+        "originalFile": "originales/img-04-calzado-mujer-v02.png",
+        "webFile": "web/img-04-calzado-mujer-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Calzado Mujer sobre una repisa metálica baja bajo prendas colgadas, en el lateral izquierdo del local minimalista.",
+        "camera": {
+          "description": "Acercamiento al módulo de calzado de Mujer.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 40,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "4d12891ce053353ab941aaf9c5ea5e5647e1c1810c8fb710ee67d816030dc2ad",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "5. Mobiliario y producto",
+          "observed": "Muestra coordinación entre prendas y zapatos sobre una repisa metálica baja.",
+          "note": "Cumple parcialmente la idea de una pared de calzado: no muestra una pared independiente con varios niveles. Adaptar el texto o producir una vista adicional.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "857142722cfba5062b349851b02538489783e476c45e2bfc616040648a9ecdc4"
+      },
+      {
+        "id": "IMG-05",
+        "title": "Kids",
+        "zoneIds": [
+          "Z03"
+        ],
+        "originalFile": "originales/img-05-kids-v02.png",
+        "webFile": "web/img-05-kids-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Zona Kids con ropa en crema, negro y salvia, mesa baja, calzado al fondo y piezas de diseño próximas.",
+        "camera": {
+          "description": "Pasillo izquierdo hacia el rincón Kids.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 45,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "1066d8d0c1eab6d868d3afa6d3500f8d1f8c7d5359f9c7e9da5a66ddfb2c1c18",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "6. Lineal, facing y niveles; 7. Color",
+          "observed": "Escala infantil, mesa baja y colección organizada; base de la comparación de color.",
+          "note": "La altura y accesibilidad no pueden medirse en la imagen.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "616cf911a58e6da29a8b9ef7dcc8297b11d4dc239587fa637c5c444c10049a5d"
+      },
+      {
+        "id": "IMG-06",
+        "title": "Calzado Kids",
+        "zoneIds": [
+          "Z03"
+        ],
+        "originalFile": "originales/img-06-calzado-kids-v02.png",
+        "webFile": "web/img-06-calzado-kids-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Detalle frontal de los niveles del módulo de calzado y ropa infantil en el fondo izquierdo; mesa Kids parcialmente visible.",
+        "camera": {
+          "description": "Acercamiento al mural Kids del fondo.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 55,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "7e0cff0e2bbb761d016c83087ee57608525e91a5ea93975cf5ea4a8fc834d08b",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "6. Lineal, facing y niveles",
+          "observed": "Productos frontales sobre varios niveles permiten explicar facing y visibilidad.",
+          "note": "La repisa superior es alta; tratar visibilidad y alcance como conceptos distintos. Añadir diagramas para explicar medidas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "e1c20b1e00b67873e60109d615f15f5a4a6343af21de3c589850ae92e85da18f"
+      },
+      {
+        "id": "IMG-07",
+        "title": "Hombre",
+        "zoneIds": [
+          "Z04"
+        ],
+        "originalFile": "originales/img-07-hombre-v02.png",
+        "webFile": "web/img-07-hombre-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Zona Hombre con chaquetas oscuras, camisas claras y calzado en repisas del lateral derecho. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Pasillo derecho hacia Hombre y el fondo.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 70,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "2394e99ea37874a4bc3d4229ff2451dd45814e675eb996972fc0388b913c8dee",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Los acentos y la luz sobre la exhibición destacan productos y jerarquías.",
+          "note": "En la comparación de luz esta imagen corresponde a iluminación con acentos.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "32502067a9a50ffcde4b0c303980a225e337e7df0032618b45087d3f5d5c5678",
+        "lightingComparisonRole": "accent_lighting"
+      },
+      {
+        "id": "IMG-08",
+        "title": "Calzado Hombre",
+        "zoneIds": [
+          "Z04"
+        ],
+        "originalFile": "originales/img-08-calzado-hombre-v02.png",
+        "webFile": "web/img-08-calzado-hombre-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Detalle del calzado de Hombre junto a camisas y chaquetas de la misma colección. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Acercamiento al módulo de calzado de Hombre.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 75,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "a9589bf7fb10b8091683baeb32685ed5ee91f9ee051095f41823c90bddb40add",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Repisas con zapatos permiten observar luz, sombras y visibilidad del producto.",
+          "note": "El PNG es válido. El WebP vacío del ZIP fue reconstruido a partir de ese PNG.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "8afd4d0b279fc7c0fab1d4c1aa9bdb518586a7038d8626a0925a681c291caa9e"
+      },
+      {
+        "id": "IMG-09",
+        "title": "Vidriera Mujer",
+        "zoneIds": [
+          "Z06",
+          "Z07"
+        ],
+        "originalFile": "originales/img-09-vidriera-mujer-v02.png",
+        "webFile": "web/img-09-vidriera-mujer-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vidriera de Mujer con dos maniquíes, conjuntos coordinados y producto sobre plataforma metálica. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Exterior próximo a vidriera Mujer.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 37,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "f7369ee3a693143e3e0a48dd80a79fa0ce26d8daf2d1373979c2d82d531745fe",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "9. Planificar la vidriera",
+          "observed": "Maniquíes y outfits permiten analizar composición, público y objetivo de exhibición.",
+          "note": "La selección debe acompañarse con una consigna concreta; la imagen no demuestra resultados comerciales.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "d5cdbc86043259ac329203332b89c59c7ff545aca262c66dd5a272f566f3d136"
+      },
+      {
+        "id": "IMG-10",
+        "title": "Caja y probadores",
+        "zoneIds": [
+          "Z08",
+          "Z09"
+        ],
+        "originalFile": "originales/img-10-caja-probadores-v02.png",
+        "webFile": "web/img-10-caja-probadores-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Caja metálica y dos puertas de probadores; una escultura y un sillón acompañan el área.",
+        "camera": {
+          "description": "Pasaje del fondo hacia caja y probadores.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 57,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "4905f29e20611f5a381d6e370aaca283f2d05c0eb80962e5829b56f24d0aa707",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "11. Observar, mejorar y proyectar",
+          "observed": "Muestra atención, orientación, circulación y accesos a probadores.",
+          "note": "No muestra el interior de los probadores. La comodidad interior, accesibilidad y otras dimensiones de la auditoría requieren contenido adicional.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "98e7f369257d1252c2e9de908c29d4b480b8e224ddd27c17df8534cc53a6b22c"
+      },
+      {
+        "id": "IMG-14",
+        "title": "Entrada interior",
+        "zoneIds": [
+          "Z01"
+        ],
+        "originalFile": "originales/img-14-entrada-v02.png",
+        "webFile": "web/img-14-entrada-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista interior desde el acceso con la isla al centro y los tres departamentos alrededor. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Interior desde entrada hacia fondo.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "1991e2ce9c806d5c38e24761f40bb37c46d2623038a667f568830abdfdd5eb72",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "3. Recorrido del cliente",
+          "observed": "Explica primera lectura, líneas de visión, orientación y puntos de interés.",
+          "note": "Usar para introducir el recorrido Mujer izquierda → Kids fondo izquierdo → Hombre derecha.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "361673a7a2dfd60be3194145d3d9aba8577aa9a0207c6711df0ed39580ebd2ed"
+      },
+      {
+        "id": "IMG-15",
+        "title": "Giro hacia el lateral derecho",
+        "zoneIds": [
+          "Z03",
+          "Z04",
+          "Z08"
+        ],
+        "originalFile": "originales/img-15-giro-fondo-v02.png",
+        "webFile": "web/img-15-giro-fondo-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista del pasaje del fondo que relaciona Kids, caja y el lateral de Hombre. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Vista intermedia del pasaje del fondo hacia el lateral derecho.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 65,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "8288dbd7820d3c8c415a0548f6711d2303ede435cc4b43af838f3ca8ca628f2a",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "Apoyo al 3. Recorrido del cliente",
+          "observed": "Apoya la conexión espacial entre Kids, el fondo y Hombre.",
+          "note": "El encuadre por sí solo no valida el giro completo; revisar el empalme al crear el video.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "4d11c874a585f3007c3f4ff6f7aa7db7603d4232af2f4c64a3e54cd7351e8164"
+      },
+      {
+        "id": "IMG-16",
+        "title": "Regreso al frente",
+        "zoneIds": [
+          "Z01",
+          "Z02",
+          "Z04",
+          "Z06",
+          "Z07"
+        ],
+        "originalFile": "originales/img-16-retorno-frente-v02.png",
+        "webFile": "web/img-16-retorno-frente-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista desde el interior hacia la entrada; Hombre aparece a la izquierda de la imagen y Mujer a la derecha. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Vista inversa hacia el acceso. Izquierda/derecha de pantalla se invierten.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "568f87e0d8cd9199df3b1bc33dc866422b1093af3fd167d876c2b6c9844bdb2b",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "Apoyo al recorrido y al 9. Vidriera",
+          "observed": "Prepara el retorno a la entrada y la transición hacia las vidrieras.",
+          "note": "Al mirar hacia la entrada se invierten los lados de pantalla: no cambia la ubicación real de Mujer y Hombre.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "57776cc416cd2313a2551ce84813868af66bd674f0145b8a0d24bef1c307596c"
+      },
+      {
+        "id": "IMG-17",
+        "title": "Isla editorial · libros y perfumes",
+        "zoneIds": [
+          "Z05"
+        ],
+        "altText": "Mesa central de acero con libros de diseño y arquitectura, tres perfumes, prendas neutras, bolso y zapatillas; sin maniquíes centrales. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "mobile": {
+          "objectPositionX_percent": 55,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image"
+        },
+        "camera": {
+          "description": "Acercamiento ambiental a la isla central.",
+          "calibrated": false
+        },
+        "originalFile": "originales/img-17-isla-editorial-v02.png",
+        "webFile": "web/img-17-isla-editorial-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "visualVersion": "4.0",
+        "sha256Original": "73ab7913a55ca587bfe095ea7baba11a73c9c7942686bb24f7903537a8b40867",
+        "hotspots": [],
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "4. Punto focal y composición; apoyo al 5",
+          "observed": "Libros, tres perfumes, prendas plegadas, bolso y zapatillas permiten explicar jerarquía, equilibrio, alturas y espacio libre.",
+          "note": "Coincide con la isla actualizada sin maniquíes centrales. Mantener objetos y geometría al preparar transiciones.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "b0b53981c985e3beaebca3ad3982cf9488c3afd97378e634a2737ef2d9a9e8f4"
+      },
+      {
+        "id": "IMG-11B",
+        "title": "Color Kids · agrupación tonal",
+        "zoneIds": [
+          "Z03"
+        ],
+        "originalFile": "originales/img-11b-color-kids-b-v02.png",
+        "webFile": "web/img-11b-color-kids-b-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista de Kids con prendas agrupadas por bloques de tonos claros, salvia y negro.",
+        "camera": {
+          "description": "Mismo encuadre de referencia que IMG-05.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 45,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "8dda7467a6795bfb52499fa2ba66643d5a23f9d3b425b1fc27460a7b73550b76",
+        "comparisonBase": "IMG-05",
+        "comparisonId": "IMG-11",
+        "variant": "b",
+        "comparisonStatus": "visual_concept_product_detail_review_recommended",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "7. Color en la exhibición",
+          "observed": "Permite comparar IMG-05 con prendas agrupadas por bloques de color.",
+          "note": "Comparación conceptual: también cambian algunos productos y cantidades; no presentarla como un experimento con el mismo inventario exacto.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "3fd9d202e1dcb73e788030e424b303a3fee260742f045472e65b278c0f4a3823"
+      },
+      {
+        "id": "IMG-12B",
+        "title": "Iluminación Hombre · luz general",
+        "zoneIds": [
+          "Z04"
+        ],
+        "originalFile": "originales/img-12b-luz-hombre-b-v02.png",
+        "webFile": "web/img-12b-luz-hombre-b-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "altText": "Vista de Hombre con luz general uniforme y menor énfasis de la iluminación de acento. Arquitectura alta con lamas y luz lineal; isla con libros y perfumes cuando es visible.",
+        "camera": {
+          "description": "Mismo encuadre de referencia que IMG-07.",
+          "calibrated": false
+        },
+        "mobile": {
+          "objectPositionX_percent": 70,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image",
+          "reason": "Use the full image for footwear and layout explanations; a cover crop can hide context."
+        },
+        "hotspots": [],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "sha256Original": "fc7c7fc826bbacc8dd7bc87b410dac69b6f4424be15561c9a3b148af9f37768a",
+        "comparisonBase": "IMG-07",
+        "comparisonId": "IMG-12",
+        "variant": "b",
+        "comparisonStatus": "visual_concept_not_photometric_measurement",
+        "visualVersion": "4.0",
+        "assetType": "store_render",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "8. Iluminación y comunicación",
+          "observed": "Permite comparar una luz más uniforme con los acentos visibles en IMG-07.",
+          "note": "Etiquetas correctas: IMG-07 = con acentos; IMG-12B = general/uniforme. No se suministran mediciones fotométricas.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "0279db759afebdf7862e0eaa08da08b6a72e7c6f412620b6369aaae82867ca3c",
+        "lightingComparisonRole": "uniform_general_lighting"
+      },
+      {
+        "id": "IMG-13",
+        "title": "De la referencia al concepto · moodboard de proceso",
+        "zoneIds": [
+          "Z06",
+          "Z07",
+          "Z05"
+        ],
+        "altText": "Moodboard conceptual de Vitrina con imágenes del frente alto, interior e isla, boceto expresivo y muestras de cemento, metal y textiles.",
+        "mobile": {
+          "objectPositionX_percent": 50,
+          "status": "proposed_needs_device_review",
+          "detailMode": "contain_or_expand_image"
+        },
+        "camera": {
+          "description": "Recurso gráfico de proceso separado del recorrido físico.",
+          "calibrated": false
+        },
+        "originalFile": "originales/img-13-proceso-concepto-v02.png",
+        "webFile": "web/img-13-proceso-concepto-v02.webp",
+        "width": 1600,
+        "height": 900,
+        "originalSize": [
+          1672,
+          941
+        ],
+        "status": "revised_generated_visual_reviewed",
+        "approvedByUser": false,
+        "visualVersion": "4.0",
+        "sha256Original": "45b2bbebf9e3dfaca7e1dcad90238ce8d74ff07f27c02c8e73a52cfdd94be72b",
+        "hotspots": [],
+        "assetType": "process_moodboard",
+        "coherence": "Nueva arquitectura alta y techo de lamas; isla editorial sin maniquíes cuando aparece.",
+        "assistantReview": {
+          "status": "reviewed_with_notes",
+          "courseTheme": "10. De la referencia al concepto",
+          "observed": "Relaciona referencias de arquitectura, materiales, paleta, boceto e interior.",
+          "note": "Moodboard ilustrativo generado: no es un registro histórico del proceso ni un plano técnico a escala.",
+          "reviewedAt": "2026-10-13T21:27:24-03:00"
+        },
+        "sha256Web": "54e0f2b831b1a9d8fd4395760fe6c4b7da051b63da341a816d27c23c00b4c9f4"
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "IMG-11",
+        "title": "Color en Kids",
+        "a": "IMG-05",
+        "b": "IMG-11B",
+        "allowedChange": "Organización cromática del producto",
+        "status": "generated_conceptual_comparison",
+        "reviewNote": "Comparación conceptual de agrupación cromática; algunos productos y cantidades cambian."
+      },
+      {
+        "id": "IMG-12",
+        "title": "Iluminación en Hombre",
+        "a": "IMG-07",
+        "b": "IMG-12B",
+        "allowedChange": "Iluminación",
+        "status": "generated_visual_comparison",
+        "reviewNote": "Contraste conceptual entre acento y luz general. Sin valores fotométricos medidos.",
+        "labels": {
+          "a": "Con acentos (IMG-07)",
+          "b": "General/uniforme (IMG-12B)"
+        }
+      }
+    ],
+    "cameraRoute": [
+      "IMG-02",
+      "IMG-14",
+      "IMG-03",
+      "IMG-17",
+      "IMG-04",
+      "IMG-05",
+      "IMG-06",
+      "IMG-15",
+      "IMG-10",
+      "IMG-07",
+      "IMG-08",
+      "IMG-16",
+      "IMG-09",
+      "IMG-02"
+    ],
+    "transitions": [
+      {
+        "id": "TR-01",
+        "from": "IMG-02",
+        "to": "IMG-14",
+        "firstFrame": "originales/img-02-fachada-v02.png",
+        "lastFrame": "originales/img-14-entrada-v02.png",
+        "cameraAction": "Avanzar desde el exterior hacia la entrada central.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Avanzar desde el exterior hacia la entrada central. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-02",
+        "from": "IMG-14",
+        "to": "IMG-03",
+        "firstFrame": "originales/img-14-entrada-v02.png",
+        "lastFrame": "originales/img-03-mujer-v02.png",
+        "cameraAction": "Girar a la izquierda y aproximarse a Mujer por el pasillo libre.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Girar a la izquierda y aproximarse a Mujer por el pasillo libre. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-03",
+        "from": "IMG-03",
+        "to": "IMG-17",
+        "firstFrame": "originales/img-03-mujer-v02.png",
+        "lastFrame": "originales/img-17-isla-editorial-v02.png",
+        "cameraAction": "Girar suavemente hacia la isla central y aproximarse a libros, perfumes y producto doblado.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Girar suavemente hacia la isla central y aproximarse a libros, perfumes y producto doblado. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-04",
+        "from": "IMG-17",
+        "to": "IMG-04",
+        "firstFrame": "originales/img-17-isla-editorial-v02.png",
+        "lastFrame": "originales/img-04-calzado-mujer-v02.png",
+        "cameraAction": "Retirarse de la isla y volver al lateral izquierdo hacia el calzado de Mujer.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Retirarse de la isla y volver al lateral izquierdo hacia el calzado de Mujer. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-05",
+        "from": "IMG-04",
+        "to": "IMG-05",
+        "firstFrame": "originales/img-04-calzado-mujer-v02.png",
+        "lastFrame": "originales/img-05-kids-v02.png",
+        "cameraAction": "Retomar el pasillo izquierdo hacia Kids al fondo.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Retomar el pasillo izquierdo hacia Kids al fondo. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-06",
+        "from": "IMG-05",
+        "to": "IMG-06",
+        "firstFrame": "originales/img-05-kids-v02.png",
+        "lastFrame": "originales/img-06-calzado-kids-v02.png",
+        "cameraAction": "Acercarse al módulo de calzado y prendas Kids del muro posterior.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Acercarse al módulo de calzado y prendas Kids del muro posterior. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-07",
+        "from": "IMG-06",
+        "to": "IMG-15",
+        "firstFrame": "originales/img-06-calzado-kids-v02.png",
+        "lastFrame": "originales/img-15-giro-fondo-v02.png",
+        "cameraAction": "Retroceder al pasaje del fondo y girar hacia el lateral derecho.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Retroceder al pasaje del fondo y girar hacia el lateral derecho. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-08",
+        "from": "IMG-15",
+        "to": "IMG-10",
+        "firstFrame": "originales/img-15-giro-fondo-v02.png",
+        "lastFrame": "originales/img-10-caja-probadores-v02.png",
+        "cameraAction": "Acercarse al área de caja y probadores.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Acercarse al área de caja y probadores. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-09",
+        "from": "IMG-10",
+        "to": "IMG-07",
+        "firstFrame": "originales/img-10-caja-probadores-v02.png",
+        "lastFrame": "originales/img-07-hombre-v02.png",
+        "cameraAction": "Retirarse por el pasillo derecho hacia Hombre con giro gradual hacia la exhibición.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Retirarse por el pasillo derecho hacia Hombre con giro gradual hacia la exhibición. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-10",
+        "from": "IMG-07",
+        "to": "IMG-08",
+        "firstFrame": "originales/img-07-hombre-v02.png",
+        "lastFrame": "originales/img-08-calzado-hombre-v02.png",
+        "cameraAction": "Acercarse al calzado de Hombre.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Acercarse al calzado de Hombre. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-11",
+        "from": "IMG-08",
+        "to": "IMG-16",
+        "firstFrame": "originales/img-08-calzado-hombre-v02.png",
+        "lastFrame": "originales/img-16-retorno-frente-v02.png",
+        "cameraAction": "Retroceder por el pasillo derecho y girar hacia la entrada.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Retroceder por el pasillo derecho y girar hacia la entrada. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-12",
+        "from": "IMG-16",
+        "to": "IMG-09",
+        "firstFrame": "originales/img-16-retorno-frente-v02.png",
+        "lastFrame": "originales/img-09-vidriera-mujer-v02.png",
+        "cameraAction": "Avanzar al acceso, salir por el vano central y desplazarse frente a la vidriera Mujer.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Avanzar al acceso, salir por el vano central y desplazarse frente a la vidriera Mujer. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      },
+      {
+        "id": "TR-13",
+        "from": "IMG-09",
+        "to": "IMG-02",
+        "firstFrame": "originales/img-09-vidriera-mujer-v02.png",
+        "lastFrame": "originales/img-02-fachada-v02.png",
+        "cameraAction": "Alejarse de la vidriera hasta recuperar la fachada completa.",
+        "duration_s_proposed": 6,
+        "videoFile": null,
+        "posterFile": null,
+        "status": "keyframes_delivered_video_pending",
+        "prompt": "Photorealistic continuous stabilized camera move through the SAME tall VITRINA store. Supplied start/end images are exact first/last frames. Alejarse de la vidriera hasta recuperar la fachada completa. Keep all geometry, product, artwork and materials fixed; high glass facade, baffle ceiling, editorial island with books and three perfumes, no central mannequins. Travel only through free passage. No cuts, fades, morphing, warping, new objects, people, text or audio. Landscape 16:9. Settle gently on final frame.",
+        "acceptance": "Comprobar costuras, geometría, cámara y producto en el vídeo real; dividir movimientos largos si el modelo deforma el local."
+      }
+    ],
+    "courseOrder": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S10",
+      "S08",
+      "S09",
+      "S11"
+    ],
+    "sectionAssetMap": [
+      {
+        "id": "S01",
+        "order": 1,
+        "assets": [
+          "IMG-02",
+          "IMG-14"
+        ],
+        "role": "Marca, fachada e introducción",
+        "primaryAssetId": "IMG-02",
+        "title": "Marca y experiencia"
+      },
+      {
+        "id": "S02",
+        "order": 2,
+        "assets": [
+          "IMG-01",
+          "IMG-14"
+        ],
+        "role": "Layout como plano/vista de apoyo, sin clip hacia la cámara elevada",
+        "primaryAssetId": "IMG-01",
+        "title": "Espacio y distribución"
+      },
+      {
+        "id": "S03",
+        "order": 3,
+        "assets": [
+          "IMG-14",
+          "IMG-01"
+        ],
+        "role": "Recorrido, líneas de visión y orientación",
+        "primaryAssetId": "IMG-14",
+        "title": "Recorrido del cliente"
+      },
+      {
+        "id": "S04",
+        "order": 4,
+        "assets": [
+          "IMG-17",
+          "IMG-03"
+        ],
+        "role": "Punto focal y composición de la isla editorial y Mujer",
+        "primaryAssetId": "IMG-17",
+        "title": "Punto focal y composición"
+      },
+      {
+        "id": "S05",
+        "order": 5,
+        "assets": [
+          "IMG-03",
+          "IMG-04",
+          "IMG-17"
+        ],
+        "role": "Muebles, prendas colgadas/dobladas y complementos",
+        "primaryAssetId": "IMG-03",
+        "title": "Mobiliario y producto"
+      },
+      {
+        "id": "S06",
+        "order": 6,
+        "assets": [
+          "IMG-05",
+          "IMG-06"
+        ],
+        "role": "Niveles y facing en Kids",
+        "primaryAssetId": "IMG-06",
+        "title": "Lineal, facing y niveles"
+      },
+      {
+        "id": "S07",
+        "order": 7,
+        "assets": [
+          "IMG-05",
+          "IMG-11B"
+        ],
+        "role": "Comparación A/B de color en panel, sin mover cámara del paseo",
+        "primaryAssetId": "IMG-11B",
+        "title": "Color en la exhibición"
+      },
+      {
+        "id": "S10",
+        "order": 8,
+        "assets": [
+          "IMG-07",
+          "IMG-08",
+          "IMG-12B"
+        ],
+        "role": "Iluminación y comunicación en Hombre",
+        "primaryAssetId": "IMG-07",
+        "title": "Iluminación y comunicación"
+      },
+      {
+        "id": "S08",
+        "order": 9,
+        "assets": [
+          "IMG-09",
+          "IMG-02"
+        ],
+        "role": "Vidrieras; vuelta al frente mediante IMG-16",
+        "primaryAssetId": "IMG-09",
+        "title": "Planificar la vidriera"
+      },
+      {
+        "id": "S09",
+        "order": 10,
+        "assets": [
+          "IMG-13",
+          "IMG-09"
+        ],
+        "role": "Referencia, moodboard conceptual y boceto; aplicación en la vidriera",
+        "primaryAssetId": "IMG-13",
+        "title": "De la referencia al concepto"
+      },
+      {
+        "id": "S11",
+        "order": 11,
+        "assets": [
+          "IMG-01",
+          "IMG-10"
+        ],
+        "role": "Auditoría y cierre, con revisión de caja/probadores",
+        "primaryAssetId": "IMG-10",
+        "title": "Observar, mejorar y proyectar"
+      }
+    ],
+    "invariants": [
+      "Mujer izquierda al entrar; Kids fondo izquierdo; Hombre derecha.",
+      "Conservar el calzado dentro de cada departamento.",
+      "Una familia de cemento, metal y grafito.",
+      "Pantalla izquierda/derecha se invierten al mirar al acceso."
+    ],
+    "implementationNotes": [
+      "Los PNG/WebP son imágenes de extremo. El lote no contiene clips animados ni un modelo 3D.",
+      "CourseOrder conserva los 11 temas y gobierna los desbloqueos. CameraRoute es un plan audiovisual distinto.",
+      "IMG-17 es el detalle de la nueva isla para composición y producto. IMG-13 es un moodboard conceptual de apoyo, fuera del recorrido de cámaras.",
+      "La altura de 4,6m sustituye la propuesta anterior de 3,2m como intención de diseño; no es una medición del render.",
+      "La isla no lleva maniquíes. Los cuatro maniquíes del frente siguen en sus vidrieras.",
+      "Las cámaras, recortes móviles y proporciones son propuestas no calibradas. Revisar las costuras al producir clips.",
+      "La identidad visual, departamentos, techo e isla se conservan; puede haber variaciones menores de producto/perspectiva propias de imágenes generadas.",
+      "Extraer pósters del vídeo definitivo. Calibrar hotspots 0–1 sobre la imagen final.",
+      "El moodboard y boceto son recursos conceptuales generados, no documentación histórica del proceso ni plano técnico.",
+      "El motor del repo de referencia requiere adaptar paneles, índice, gate Sí/No y progreso del curso."
+    ],
+    "designUpdate": {
+      "priorHeight_m_proposed": 3.2,
+      "height_m_proposed": 4.6,
+      "heightCalibrated": false,
+      "footprint_m_proposed": [
+        8,
+        12
+      ],
+      "architecture": "Frente acristalado de mayor altura, marcos grafito, aletas metálicas, techo de lamas con luz lineal y rieles.",
+      "centreIsland": "Libros de diseño/arquitectura, 3 perfumes, prendas dobladas, bolso y zapatillas. Sin maniquíes centrales.",
+      "windowMannequins": "Dos por vidriera, con cabeza neutra y conjuntos coordinados. Se mantienen en el frente."
+    },
+    "visualReview": {
+      "reviewVersion": "4.1",
+      "reviewedAt": "2026-10-13T21:27:24-03:00",
+      "reviewer": "assistant",
+      "notionGallery": "https://app.notion.com/p/3f98350307db81dba626d304f560b727",
+      "imageCount": 17,
+      "courseThemeCount": 11,
+      "transitionCount": 13,
+      "result": "coherent_style_and_teaching_support_with_pending_visual_adjustments",
+      "userApproval": "pending",
+      "continuousWalkthrough": "pending_video_generation_and_validation",
+      "technicalRepair": {
+        "file": "web/img-08-calzado-hombre-v02.webp",
+        "reason": "empty_file_in_source_archive",
+        "source": "originales/img-08-calzado-hombre-v02.png",
+        "format": "WEBP",
+        "size": [
+          1600,
+          900
+        ],
+        "quality": 86,
+        "sha256": "8afd4d0b279fc7c0fab1d4c1aa9bdb518586a7038d8626a0925a681c291caa9e"
+      }
+    }
+  },
+  "stages": [
+    {
+      "title": "1. Base del curso",
+      "status": "Preparada",
+      "deliverable": "Fuentes, 11 temas y cobertura de U1-U8.",
+      "acceptance": "Mapa de fuentes conservado."
+    },
+    {
+      "title": "2. Local y recursos",
+      "status": "Revisados con ajustes",
+      "deliverable": "17 imágenes y layout v4.",
+      "acceptance": "Resolver calzado Mujer, medidas y continuidad."
+    },
+    {
+      "title": "3. Contenidos",
+      "status": "Borrador preparado",
+      "deliverable": "11 textos base, objetivos y preguntas.",
+      "acceptance": "Revisión docente, ejemplos y ampliaciones."
+    },
+    {
+      "title": "4. Diseño de experiencia",
+      "status": "Pendiente",
+      "deliverable": "Paneles, índice, repaso y comportamiento móvil en Figma.",
+      "acceptance": "Validar lectura y navegación con recursos reales."
+    },
+    {
+      "title": "5. Transiciones",
+      "status": "Pendiente",
+      "deliverable": "13 movimientos de cámara, videos y pósters.",
+      "acceptance": "Sin deformaciones, cortes ni cambios de productos."
+    },
+    {
+      "title": "6. Apartado funcional",
+      "status": "Pendiente",
+      "deliverable": "Una escena con texto, Sí/No y progreso guardado.",
+      "acceptance": "El estado de avance funciona al recargar y regresar."
+    },
+    {
+      "title": "7. Curso completo",
+      "status": "Pendiente",
+      "deliverable": "11 apartados coordinados con escenas y comparaciones.",
+      "acceptance": "Conservar orden pedagógico, revisitas y lectura móvil."
+    },
+    {
+      "title": "8. Verificación y entrega",
+      "status": "Pendiente",
+      "deliverable": "Contenido, acceso, carga, publicación y documentación.",
+      "acceptance": "Pruebas reales, enlaces y estado final registrados."
+    }
+  ],
+  "pending": [
+    {
+      "item": "Calzado Mujer",
+      "detail": "IMG-04 muestra una repisa baja. Producir una vista que resuelva la pared prevista o revisar el alcance del requisito."
+    },
+    {
+      "item": "Continuidad y plano",
+      "detail": "Las imágenes comparten estilo, pero presentan pequeñas variaciones de producto y muebles. Calibrar cámaras y validar cada empalme; dimensiones propuestas, sin medición."
+    },
+    {
+      "item": "Videos",
+      "detail": "13 transiciones planificadas. Todos los campos videoFile y posterFile están pendientes; los prompts están en el mapa visual v4."
+    },
+    {
+      "item": "Revisión docente",
+      "detail": "Revisar los 11 textos base, completar ejemplos y desarrollar color, facing, composición, investigación, auditoría, profesión, tecnología y sustentabilidad."
+    },
+    {
+      "item": "Evaluación académica",
+      "detail": "Definir si será una experiencia de consulta o una adaptación evaluada. Las confirmaciones Sí/No no reemplazan trabajos prácticos, exámenes ni evaluación docente."
+    },
+    {
+      "item": "Interfaz y móvil",
+      "detail": "Hotspots, encuadres, tamaños de texto y comportamiento de lectura no están calibrados ni implementados."
+    },
+    {
+      "item": "Implementación",
+      "detail": "El repositorio es una referencia leída. Vitrina todavía no está integrada ni publicada."
+    }
+  ],
+  "acceptance": [
+    {
+      "area": "Contenido",
+      "criterion": "11 apartados con objetivo, explicación, ejemplo, fuente y pregunta; ampliaciones revisadas."
+    },
+    {
+      "area": "Orden y desbloqueo",
+      "criterion": "Primera sesión inicia en S01. Sí habilita solo el siguiente; No no borra lo completado; el cierre funciona sin intentar desbloquear otra sección."
+    },
+    {
+      "area": "Revisitas y persistencia",
+      "criterion": "Recargar conserva avance; volver a un tema no pierde progreso; volver a responder No no revoca temas ya completados."
+    },
+    {
+      "area": "Recorrido",
+      "criterion": "Las uniones de clips conservan geometría y objetos; ningún movimiento atraviesa muebles; el índice de cámara no decide el tema habilitado."
+    },
+    {
+      "area": "Móvil",
+      "criterion": "Las explicaciones se leen sin tapar el producto; cada recorte conserva el detalle importante; se permite ampliar o mostrar imagen completa."
+    },
+    {
+      "area": "Acceso",
+      "criterion": "Controles por teclado, foco visible, textos alternativos, alertas legibles y movimiento reducido."
+    },
+    {
+      "area": "Carga",
+      "criterion": "Medir la carga inicial y de videos en dispositivos reales; usar recursos optimizados e imágenes de respaldo."
+    },
+    {
+      "area": "Entrega",
+      "criterion": "Repositorio y web identificados; documentación con versión, decisiones, pendientes y siguiente tarea."
+    }
+  ],
+  "resumePrompt": "Continuá Vitrina desde el documento maestro v5 y el paquete visual v4 verificado. Leé el TXT, el JSON maestro, la galería de Notion y los manifiestos v4. Hay 17 imágenes revisadas y 11 textos base, sin aprobación final ni revisión docente. Las 13 transiciones todavía no tienen videos. Resolvé calzado Mujer y continuidad, revisá los contenidos y diseñá la experiencia móvil. Integrá primero un apartado completo sobre la base técnica de referencia. Conservá Mujer → Kids → Hombre, la isla sin maniquíes centrales y el orden S01,S02,S03,S04,S05,S06,S07,S10,S08,S09,S11. Actualizá Notion y el punto de retoma al cerrar cada sesión.",
+  "implementationUpdate": {
+    "date": "2026-10-16",
+    "applicationVersion": "1.3.0",
+    "effectiveDocumentation": [
+      "README.md",
+      "docs/CAMBIOS_v1_3.md",
+      "docs/INTERACTIVIDAD.md"
+    ],
+    "navigation": "standalone_chapter_pages_with_client_navigation",
+    "progressDataVersion": "1",
+    "teacherReview": "pending",
+    "browserReview": "pending_required_controller_unavailable",
+    "githubCopy": "pending_destination_and_access",
+    "note": "Historical implementation statuses remain for context; effective implementation is documented in the linked repository files.",
+    "interactiveStage": "normalized_hotspots_and_comparison_drag"
+  }
+}

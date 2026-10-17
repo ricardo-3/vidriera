@@ -1,0 +1,10 @@
+import './check.mjs';
+import './layout-check.mjs';
+import './navigation-check.mjs';
+import './camera-check.mjs';
+import './store-image-check.mjs';
+import './syntax-check.mjs';
+import './immersive-check.mjs';
+import './reading-check.mjs';
+import {execFileSync} from 'node:child_process';
+execFileSync(process.execPath,['scripts/test-components.mjs'],{stdio:'inherit'});

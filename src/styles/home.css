@@ -1,0 +1,27 @@
+/* Full-size, uncropped storefront inside the same rounded frame as the course. */
+.home-hero{display:grid;grid-template-areas:'hero';min-height:0;padding:8px;border-radius:36px;background:#5b5651}
+.home-hero:after,.hero-atmosphere{display:none}
+.hero-photo{grid-area:hero;position:relative;inset:auto;width:100%;height:auto;aspect-ratio:16/9;align-self:center;min-width:0;border-radius:28px;overflow:hidden;z-index:0}
+.hero-photo .store-image{border-radius:inherit;overflow:hidden;filter:none}
+.hero-photo .store-image img{border-radius:inherit;object-fit:contain}
+.hero-card{grid-area:hero;align-self:center;z-index:1;width:44%;max-width:600px;margin:28px 0 68px 28px;padding:clamp(28px,2.6vw,40px);border-radius:28px}
+.hero-card h1{font-size:clamp(40px,4.2vw,66px)}
+.hero-bottom{left:36px;right:28px;bottom:24px;z-index:2}
+.hero-bottom>span{border-radius:16px;padding:7px 11px;background:#292520a6;backdrop-filter:blur(16px)}
+@media(max-width:1100px){
+ .home-hero{grid-template-areas:'photo' 'copy' 'footer';gap:12px;padding:8px;min-height:0}
+ .hero-photo{grid-area:photo;inset:auto;width:100%;height:auto;aspect-ratio:16/9;align-self:start;border-radius:25px}
+ .hero-card{grid-area:copy;align-self:auto;width:auto;max-width:none;margin:0;padding:30px;border-radius:25px}
+ .hero-card h1{font-size:clamp(38px,5.5vw,58px)}
+ .hero-card>p:not(.eyebrow){max-width:520px}
+ .hero-bottom{grid-area:footer;position:static;margin:2px 8px 8px;gap:12px}
+}
+@media(max-width:720px){
+ .home-hero{padding:7px;gap:10px;border-radius:27px}
+ .hero-photo{border-radius:20px}
+ .hero-card{padding:26px 22px;border-radius:20px}
+ .hero-card h1{font-size:clamp(36px,8.5vw,48px)}
+ .hero-bottom{margin:1px 5px 6px;font-size:8px;letter-spacing:.06em}
+ .hero-bottom>span{padding:6px 8px}
+ .hero-bottom>.sp-button{padding:9px 11px;font-size:10px;white-space:nowrap}
+}

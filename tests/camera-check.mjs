@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {CameraPlayer} from '../src/domain/camera.js';
+
+const prepared=[];let animations=0,reduced=false;
+globalThis.Image=class {constructor(){prepared.push(this);}decode(){return Promise.resolve();}};
+globalThis.matchMedia=()=>({matches:reduced});
+const image={hidden:false,src:'original',alt:'',getAnimations:()=>[],animate:()=>{animations++;}};
+const video={hidden:true,pause(){},getAttribute(){return '';}};
+const assets={a:{src:'a.webp',alt:'Vista A'},b:{src:'b.webp',alt:'Vista B'}};
+const camera=new CameraPlayer(image,video,assets);
+const first=camera.showFrame('a'),second=camera.showFrame('b');
+await prepared[1].onload();await second;assert.equal(image.src,'b.webp');
+await prepared[0].onload();await first;assert.equal(image.src,'b.webp');assert.equal(image.alt,'Vista B');assert.equal(animations,1);
+reduced=true;
+const third=camera.playTransition({video:null},'a');await prepared[2].onload();await third;assert.equal(image.src,'a.webp');assert.equal(animations,1);
+const fourth=camera.showFrame('b');prepared[3].onerror();await fourth;assert.equal(image.src,'b.webp');assert.equal(video.hidden,true);
+assert.equal(await camera.scrubTransition({video:null},.5),false);
+const sequence=camera.sequence;await camera.showFrame('missing');assert.equal(camera.sequence,sequence);
+delete globalThis.Image;delete globalThis.matchMedia;
+console.log('Passed: latest requested tour image wins, failed images do not stall navigation, motion reduction and no-video fallback.');
