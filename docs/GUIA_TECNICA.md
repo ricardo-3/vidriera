@@ -84,3 +84,13 @@ El maestro v5 mantiene el brief histórico; `docs/CAMBIOS_v1_6.md` describe la i
 Las decisiones de cada versión se conservan en los documentos `CAMBIOS_v1_*.md` de esta carpeta. El registro de ubicación del repositorio está en [CORRECCION_REPOSITORIO_2026_10_17.md](CORRECCION_REPOSITORIO_2026_10_17.md).
 
 Para continuar, consultá [PROMPT_CONTINUIDAD.md](PROMPT_CONTINUIDAD.md). Antes de publicar cambios de la aplicación, comprobá el build, las pruebas y la navegación en el entorno de destino.
+
+## Publicación en GitHub Pages
+
+La publicación del curso debe usar la salida compilada de `dist/`. El `index.html` de la raíz es una entrada de desarrollo para Vite: publicarlo directamente deja el mensaje «Preparando tu recorrido…» sin iniciar React ni cargar sus estilos.
+
+El workflow [.github/workflows/pages.yml](../.github/workflows/pages.yml) instala las dependencias, compila el curso, ejecuta `node tests/check-all.mjs` y publica exclusivamente `dist/`. En Settings → Pages → Build and deployment, la fuente debe ser **GitHub Actions**.
+
+Después de publicar, `scripts/verify-pages.mjs` comprueba por HTTP que el inicio, el taller, las once páginas de tema, los bundles y las 17 fotografías coincidan byte por byte con la compilación. Esta comprobación de archivos no sustituye una revisión visual real en navegador.
+
+El código de la aplicación, las imágenes originales, la versión funcional y las claves de guardado no cambian con esta configuración de publicación.
